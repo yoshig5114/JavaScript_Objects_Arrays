@@ -16,25 +16,34 @@ console.log(sum);
 // Exercise 2 Section
 console.log("EXERCISE 2:\n==========\n");
 
-let Book = {};
-Book.title = "The Storyteller";
-Book.pages = 371;
-Book.readCount = 1;
-Book.info = function(){
-    return `${Book.title}, ${Book.pages} pages, read ${Book.readCount} time(s).`;
+let book = {};
+book.title = "The Storyteller";
+book.pages = 371;
+book.readCount = 1;
+book.info = function(){
+    return `${book.title}, ${book.pages} pages, read ${book.readCount} time(s).`;
 
 }
-console.log(Book.info());
+console.log(book.info());
 
 // exercise 3
 console.log("EXERCISE 3:\n==========\n");
 
 let sentence = "The quick brown fox jumps over the lazy dog";
+let wordArr = [];
 let reverseWord = [];
+let joinedWord = "";
 let splitSentence = sentence.split(" ");
-for (let i = 0; i < splitSentence.length(); i++){
-    reverseWord = splitSentence[i].reverse(); 
+let newSentence = "";
+for (let i = 0; i < splitSentence.length; i++){
+    wordArr = splitSentence[i].split("");
+    reverseWord = wordArr.reverse(); 
+    //console.log(reverseWord);
+    joinedWord = reverseWord.join("");
+    //console.log (joinedWord);
+    newSentence = newSentence + joinedWord + " ";
 }
+console.log(newSentence)
 
 
 
